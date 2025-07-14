@@ -11,7 +11,7 @@ def junitVersion = "5.12.2";
 
 dependencies {
     testImplementation(
-            "com.codebrone:selenide:$selenideVersion",
+            "com.codeborne:selenide:$selenideVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion"
     )
 }
