@@ -6,12 +6,16 @@ repositories {
     mavenCentral()
 }
 
-def selenideVersion  = "6.10.3";
-def junitVersion = "5.12.2";
+def selenideVersion  = "6.19.1";
+def junitVersion = "5.8.2";
 
 dependencies {
     testImplementation(
             "com.codeborne:selenide:$selenideVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion"
     )
+}
+
+test {
+    useJUnitPlatform()
 }
