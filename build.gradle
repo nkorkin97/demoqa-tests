@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+def selenideVersion  = "6.10.3";
+def junitVersion = "5.12.2";
+
+dependencies {
+    testImplementation(
+            "com.codebrone:selenide:$selenideVersion",
+            "org.junit.jupiter:junit-jupiter:$junitVersion"
+    )
+}
