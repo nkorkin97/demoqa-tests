@@ -1,3 +1,5 @@
+package lessons.eight;
+
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -8,6 +10,7 @@ public class FirstJUnitTest {
     static void beforeAll() {
         System.out.println("это метод @BeforeAll");
     }
+
     @BeforeEach
     void beforeEach() {
         System.out.println("это метод @BeforeEach");
