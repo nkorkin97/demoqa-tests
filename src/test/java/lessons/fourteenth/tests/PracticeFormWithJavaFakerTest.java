@@ -1,37 +1,35 @@
-package lessons.tenth.tests;
+package lessons.fourteenth.tests;
 
-import com.codeborne.selenide.Configuration;
-import lessons.tenth.pages.RegistarationPage;
-import org.junit.jupiter.api.BeforeAll;
+import com.github.javafaker.Faker;
+import lessons.fourteenth.pages.RegistarationPage;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
-public class PracticeFormWithPageObjectsTest {
+public class PracticeFormWithJavaFakerTest extends BaseTest {
 
     RegistarationPage registarationPage = new RegistarationPage();
 
+    Faker faker = new Faker();
+
     String
-            userName = "Nikita",
-            lastName = "Korkin",
-            email = "nikita@korkin.com",
+            userName = faker.name().firstName(),
+            lastName = faker.name().lastName(),
+            email = faker.internet().emailAddress(),
             gender = "Other",
             phone = "1234567890",
             month = "August",
             year = "1997",
             day = "22",
             subject = "English",
-            hobbie1 = "Sports";
+            hobbieSports = "Sports",
+            hobbieReading = "Reading",
+            hobbieMusic = "Music",
+            address = faker.address().fullAddress(),
+            state = "NCR",
+            city = "Delhi";
 
     File fileExample = new File("src/test/resources/example/test.jpg");
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com/";
-        Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.browser = "chrome";
-    }
 
     @Test
     void practiceFormTest() {
@@ -43,16 +41,18 @@ public class PracticeFormWithPageObjectsTest {
                 .setPhone(phone)
                 .setDateOfBirth(month, year, day)
                 .setSubject(subject)
-                .setHobbies(hobbie1)
-                .setHobbies("Reading")
-                .setHobbies("Music")
+                .setHobbies(hobbieSports)
+                .setHobbies(hobbieReading)
+                .setHobbies(hobbieMusic)
                 .setPicture(fileExample)
-                .setCurrentAddress("Example")
-                .setState("NCR")
-                .setCity("Delhi")
+                .setCurrentAddress(address)
+                .setState(state)
+                .setCity(city)
                 .clickSubmit()
                 .checkModal()
                 .checkResultModalValue("Student Name", userName + " " + lastName);
+
+        System.out.println("");
     }
 
 }

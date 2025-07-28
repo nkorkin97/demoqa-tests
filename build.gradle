@@ -20,7 +20,8 @@ dependencies {
             "com.codeborne:pdf-test:$pdfTestVersion",
             "com.codeborne:xls-test:$xlsTestVersion",
             "com.opencsv:opencsv:5.7.1",
-            "com.google.code.gson:gson:2.10.1"
+            "com.google.code.gson:gson:2.10.1",
+            "com.github.javafaker:javafaker:1.0.2"
     )
 }
 
