@@ -29,7 +29,6 @@ public class LabelsTest {
 
     @Test
     public void testDynamicsLabels() {
-
     }
 
     // 01:27:00
