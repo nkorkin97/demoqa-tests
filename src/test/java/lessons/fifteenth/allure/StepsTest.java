@@ -34,7 +34,7 @@ public class StepsTest {
             $("#pull-requests-tab").scrollTo().click();
         });
         step("Проверяем pull request c номером", () -> {
-            $(".js-navigation-container").$("#issue_79!").shouldBe(Condition.exist);
+            $(".js-navigation-container").$("#issue_79").shouldBe(Condition.exist);
         });
     }
 
