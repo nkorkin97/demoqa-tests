@@ -15,4 +15,5 @@ jobs:
           with:
             distribution: 'zulu' # дистрибутив java
             java-version: '17' # версия java
+        - run: chmod +x ./gradlew
         - run: ./gradlew clean test
