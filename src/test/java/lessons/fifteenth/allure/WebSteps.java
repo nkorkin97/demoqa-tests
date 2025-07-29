@@ -38,7 +38,7 @@ public class WebSteps {
 
     @Step("Проверяем issue")
     public void shoulSeeRequestWithNumber() {
-        $(".js-navigation-container").$("#issue_79!").shouldBe(Condition.exist);
+        $(".js-navigation-container").$("#issue_79").shouldBe(Condition.exist);
     }
 
     @Attachment(value = "Screenshot", type = "image")

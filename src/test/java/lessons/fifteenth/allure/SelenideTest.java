@@ -22,6 +22,6 @@ public class SelenideTest {
         $("#query-builder-test").scrollTo().submit();
         $("[data-testid = 'results-list'] [href='/eroshenkoam/allure-example']").scrollTo().click();
         $("#pull-requests-tab").scrollTo().click();
-        $(".js-navigation-container").$("#issue_79!").shouldBe(Condition.exist);
+        $(".js-navigation-container").$("#issue_79").shouldBe(Condition.exist);
     }
 }
