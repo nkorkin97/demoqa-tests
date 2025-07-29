@@ -16,4 +16,4 @@ jobs:
             distribution: 'zulu' # дистрибутив java
             java-version: '17' # версия java
         - run: chmod +x ./gradlew
-        - run: ./gradlew clean test
+        - run: ./gradlew clean test -Dselenide.remote=http://loaclhost:4444/wd/hub
