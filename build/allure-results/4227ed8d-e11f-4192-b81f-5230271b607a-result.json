@@ -1,0 +1,55 @@
+{
+  "uuid": "4227ed8d-e11f-4192-b81f-5230271b607a",
+  "historyId": "3f045ea3a0177fdf7e11179dbc8b2481",
+  "testCaseId": "[engine:junit-jupiter]/[class:lessons.fifteenth.allure.SelenideTest]/[method:testIssueSearch()]",
+  "testCaseName": "testIssueSearch()",
+  "fullName": "lessons.fifteenth.allure.SelenideTest.testIssueSearch",
+  "labels": [
+    {
+      "name": "junit.platform.uniqueid",
+      "value": "[engine:junit-jupiter]/[class:lessons.fifteenth.allure.SelenideTest]/[method:testIssueSearch()]"
+    },
+    {
+      "name": "host",
+      "value": "5CD149HRKF"
+    },
+    {
+      "name": "thread",
+      "value": "4468@5CD149HRKF.Test worker(1)"
+    },
+    {
+      "name": "framework",
+      "value": "junit-platform"
+    },
+    {
+      "name": "language",
+      "value": "java"
+    },
+    {
+      "name": "package",
+      "value": "lessons.fifteenth.allure.SelenideTest"
+    },
+    {
+      "name": "testClass",
+      "value": "lessons.fifteenth.allure.SelenideTest"
+    },
+    {
+      "name": "testMethod",
+      "value": "testIssueSearch"
+    },
+    {
+      "name": "suite",
+      "value": "lessons.fifteenth.allure.SelenideTest"
+    }
+  ],
+  "links": [],
+  "name": "testIssueSearch()",
+  "status": "passed",
+  "stage": "finished",
+  "description": "",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1753690482702,
+  "stop": 1753690492377
+}
