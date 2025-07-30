@@ -22,7 +22,7 @@ jobs:
       - name: Run tests
         run: |
           chmod +x ./gradlew
-          ./gradlew clean simple_test -Dselenide.remote=http://localhost:4444/wd/hub
+          ./gradlew clean check_tests -Dselenide.remote=http://localhost:4444/wd/hub
 
       - name: Checkout gh-pages
         if: always()

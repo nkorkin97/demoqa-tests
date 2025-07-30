@@ -2,9 +2,11 @@ package lessons.fourteenth.tests;
 
 import com.github.javafaker.Faker;
 import lessons.fourteenth.pages.RegistarationPage;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+
 
 public class PracticeFormWithJavaFakerTest extends BaseTest {
 

@@ -3,10 +3,12 @@ package lessons.tenth.tests;
 import com.codeborne.selenide.Configuration;
 import lessons.tenth.pages.RegistarationPage;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
+@Tag("check it")
 public class PracticeFormWithPageObjectsTest {
 
     RegistarationPage registarationPage = new RegistarationPage();
