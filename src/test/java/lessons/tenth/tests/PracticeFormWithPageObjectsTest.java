@@ -52,7 +52,7 @@ public class PracticeFormWithPageObjectsTest {
                 .setHobbies("Music")
                 .setPicture(fileExample)
                 .setCurrentAddress("Example")
-                .setState("NCR")
+                .setState("NCR") //55
                 .setCity("Delhi")
                 .clickSubmit()
                 .checkModal()

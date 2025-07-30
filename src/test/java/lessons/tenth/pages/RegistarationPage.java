@@ -46,27 +46,27 @@ public class RegistarationPage {
     }
 
     public RegistarationPage setFirstName(String value) {
-        firstNameInput.setValue(value);
+        firstNameInput.shouldBe(Condition.visible, Condition.enabled).scrollTo().setValue(value);
         return this;
     }
 
     public RegistarationPage setLastName(String value) {
-        lastNameInput.setValue(value);
+        lastNameInput.shouldBe(Condition.visible, Condition.enabled).scrollTo().setValue(value);
         return this;
     }
 
     public RegistarationPage setEmail(String value) {
-        emailInput.setValue(value);
+        emailInput.shouldBe(Condition.visible, Condition.enabled).scrollTo().setValue(value);
         return this;
     }
 
     public RegistarationPage setGender(String value) {
-        genderInput.$(byText(value)).click();
+        genderInput.$(byText(value)).shouldBe(Condition.visible, Condition.enabled).scrollTo().click();
         return this;
     }
 
     public RegistarationPage setPhone(String value) {
-        phoneInput.setValue(value);
+        phoneInput.shouldBe(Condition.visible, Condition.enabled).scrollTo().setValue(value);
         return this;
     }
 
@@ -76,13 +76,13 @@ public class RegistarationPage {
     }
 
     public RegistarationPage setSubject(String value) {
-        subjectsInput.setValue(value);
-        subjectOptions.shouldHave(Condition.text(value)).click();
+        subjectsInput.shouldBe(Condition.visible, Condition.enabled).scrollTo().setValue(value);
+        subjectOptions.shouldHave(Condition.text(value)).shouldBe(Condition.visible, Condition.enabled).scrollTo().click();
         return this;
     }
 
     public RegistarationPage setHobbies(String value) {
-        hobbiesWrapper.$(byText(value)).click();
+        hobbiesWrapper.$(byText(value)).shouldBe(Condition.visible, Condition.enabled).scrollTo().click();
         return this;
     }
 
@@ -95,24 +95,24 @@ public class RegistarationPage {
     }
 
     public RegistarationPage setCurrentAddress(String value) {
-        currentAddress.setValue(value);
+        currentAddress.shouldBe(Condition.visible, Condition.enabled).scrollTo().setValue(value);
         return this;
     }
 
     public RegistarationPage setState(String value) {
-        state.click();
-        stateCityWrapper.$(byText(value)).click();
+        state.shouldBe(Condition.visible, Condition.enabled).scrollTo().click();
+        stateCityWrapper.$(byText(value)).shouldBe(Condition.visible, Condition.enabled).scrollTo().click();
         return this;
     }
 
     public RegistarationPage setCity(String value) {
-        city.click();
-        stateCityWrapper.$(byText(value)).click();
+        city.shouldBe(Condition.visible, Condition.enabled).scrollTo().click();
+        stateCityWrapper.$(byText(value)).shouldBe(Condition.visible, Condition.enabled).scrollTo().click();
         return this;
     }
 
     public RegistarationPage clickSubmit() {
-        submit.scrollTo().click();
+        submit.shouldBe(Condition.visible, Condition.enabled).scrollTo().click();
         return this;
     }
 
