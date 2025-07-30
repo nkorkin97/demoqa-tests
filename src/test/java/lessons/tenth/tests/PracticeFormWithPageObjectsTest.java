@@ -29,6 +29,7 @@ public class PracticeFormWithPageObjectsTest {
 
     @BeforeAll
     static void beforeAll() {
+        Configuration.headless = true;
         Configuration.baseUrl = "https://demoqa.com/";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
