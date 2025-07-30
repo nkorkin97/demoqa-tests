@@ -10,15 +10,18 @@ jobs:
     steps:
 
         - name: Download repository
-        - uses: actions/checkout@v3
+          uses: actions/checkout@v3
 
         - name: SetUp java
-        - uses: actions/setup-java@v3
+          uses: actions/setup-java@v3
           with:
             distribution: 'zulu'
             java-version: '17'
-        - run: chmod +x ./gradlew
-        - run: ./gradlew clean test -Dselenide.remote=http://loaclhost:4444/wd/hub
+
+        - name: Make gradlew executable and run tests
+          run: |
+           chmod +x ./gradlew
+           ./gradlew clean test -Dselenide.remote=http://loaclhost:4444/wd/hub
 
         - name: Get Allure history
           uses: actions/checkout@v2
