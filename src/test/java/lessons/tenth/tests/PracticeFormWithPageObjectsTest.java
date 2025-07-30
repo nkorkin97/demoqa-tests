@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
-@Tag("check it")
+@Tag("checkIt")
 public class PracticeFormWithPageObjectsTest {
 
     RegistarationPage registarationPage = new RegistarationPage();
