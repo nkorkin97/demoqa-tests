@@ -18,6 +18,12 @@ jobs:
         - run: chmod +x ./gradlew
         - run: ./gradlew clean test -Dselenide.remote=http://loaclhost:4444/wd/hub
 
+        - name: Install Allure
+          run: |
+            sudo apt-get update
+            sudo apt-get install -y allure
+            sudo "$HOME/ .local/bin" >>$GITHUB_PATH
+
         - name: Generate Allure Report
           if: always()
           run: |
