@@ -16,10 +16,13 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
+      - name: Start selenoid
+        uses: Xotabu4/selenoid-github-action@v2
+
       - name: Run tests
         run: |
           chmod +x ./gradlew
-          ./gradlew clean test -Dselenide.remote=http://localhost:4444/wd/hub
+          ./gradlew clean simple_test -Dselenide.remote=http://localhost:4444/wd/hub
 
       - name: Checkout gh-pages
         if: always()
