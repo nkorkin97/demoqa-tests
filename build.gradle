@@ -39,9 +39,6 @@ dependencies {
             "com.github.javafaker:javafaker:1.0.2",
             "io.qameta.allure:allure-selenide:2.20.1"
     )
-    implementation(
-            "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.0"
-    )
 }
 
 test {
@@ -50,23 +47,9 @@ test {
     systemProperties =System.getProperties()
 }
 
-task simple_test(type: Test) {
+task tasktest(type: Test) {
     useJUnitPlatform() {
-        includeTags("Simple")
+        includeTags("nkorkin")
     }
-    systemProperties = System.getProperties();
 }
 
-task two(type: Test) {
-    useJUnitPlatform() {
-        includeTags("checkIt")
-    }
-    systemProperties = System.getProperties();
-}
-
-task now(type: Test) {
-    useJUnitPlatform() {
-        includeTags("Now")
-    }
-    systemProperties = System.getProperties();
-}

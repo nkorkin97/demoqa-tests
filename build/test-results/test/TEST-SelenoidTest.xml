@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SelenoidTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-08-03T20:02:58.323Z" hostname="nkorkin-MS-7C88" time="177.917">
+  <properties/>
+  <testcase name="practiceFormTest()" classname="SelenoidTest" time="177.917"/>
+  <system-out><![CDATA[test.jpg
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

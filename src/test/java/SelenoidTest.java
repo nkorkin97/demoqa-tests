@@ -1,15 +1,16 @@
-package lessons.tenth.tests;
-
 import com.codeborne.selenide.Configuration;
 import lessons.tenth.pages.RegistarationPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 @Tag("nkorkin")
-public class PracticeFormWithPageObjectsTest {
+public class SelenoidTest {
 
     RegistarationPage registarationPage = new RegistarationPage();
 
@@ -33,8 +34,23 @@ public class PracticeFormWithPageObjectsTest {
         Configuration.baseUrl = "https://demoqa.com/";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.browser = "firefox";
-        Configuration.timeout = 10000;
+        Configuration.remote = "http://localhost:8080/wd/hub";
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("browserVersion", "127.0");
+        capabilities.setCapability("selenoid:options", new HashMap<String, Object>() {{
+            put("name", "Test badge...");
+            put("sessionTimeout", "15m");
+            put("enableVNC", true);
+            put("env", new ArrayList<String>() {{
+                add("TZ=UTC");
+            }});
+            put("labels", new HashMap<String, Object>() {{
+                put("manual", "true");
+            }});
+            put("enableVideo", true);
+        }});
+        Configuration.browserCapabilities = capabilities;
     }
 
     @Test
