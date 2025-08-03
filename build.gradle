@@ -54,10 +54,19 @@ task simple_test(type: Test) {
     useJUnitPlatform() {
         includeTags("Simple")
     }
+    systemProperties = System.getProperties();
 }
 
 task two(type: Test) {
     useJUnitPlatform() {
         includeTags("checkIt")
     }
+    systemProperties = System.getProperties();
+}
+
+task now(type: Test) {
+    useJUnitPlatform() {
+        includeTags("Now")
+    }
+    systemProperties = System.getProperties();
 }
