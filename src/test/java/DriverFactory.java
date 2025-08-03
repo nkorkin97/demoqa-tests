@@ -1,4 +1,7 @@
 import com.codeborne.selenide.Configuration;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import java.util.HashMap;
 
 public class DriverFactory {
 
@@ -11,8 +14,14 @@ public class DriverFactory {
                 break;
             case "firefox":
                 Configuration.browser = "firefox";
+                break;
             default: throw new IllegalArgumentException("Unknown browser name -> " + browser);
         }
         Configuration.remote = "http://localhost:4444/wd/hub";
+        HashMap<String, Object> selenoidOptions = new HashMap<>();
+        selenoidOptions.put("enableVNC", true);
+        selenoidOptions.put("enableVideo", false);
+
+        Configuration.browserCapabilities.setCapability("selenoid:options", selenoidOptions);
     }
 }
