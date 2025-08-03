@@ -53,7 +53,7 @@ task simple_test(type: Test) {
     }
 }
 
-task check_tests(type: Test) {
+task two(type: Test) {
     useJUnitPlatform() {
         includeTags("checkIt")
     }

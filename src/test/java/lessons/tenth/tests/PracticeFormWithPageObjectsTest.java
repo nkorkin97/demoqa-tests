@@ -33,7 +33,7 @@ public class PracticeFormWithPageObjectsTest {
         Configuration.baseUrl = "https://demoqa.com/";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.browser = "chrome";
+        Configuration.browser = "firefox";
         Configuration.timeout = 10000;
     }
 
